@@ -2,14 +2,14 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-// import todoApp from './reducers'
+import dspApp from './reducers'
 import App from './components/App'
 
-// let store = createStore()
+let store = createStore(dspApp, window.devToolsExtension ? window.devToolsExtension() : undefined)
 
-// <Provider store={store}>
-// </Provider>,
 render(
-    <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 )

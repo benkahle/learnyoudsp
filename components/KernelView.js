@@ -4,16 +4,20 @@ export default class KernelView extends Component {
   constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
+    this.onSave = this.onSave.bind(this)
   }
 
   onChange(i, j, val) {
-    let data = this.props.data;
+    var data = this.props.data.map(row => [...row]);
     data[i][j] = val;
     this.props.onChange(data);
   }
 
-  render() {
+  onSave() {
+    this.props.onSave({size: this.props.size, data: this.props.data})
+  }
 
+  render() {
     const rows = this.props.data;
     return (
       <div>
@@ -38,7 +42,7 @@ export default class KernelView extends Component {
             Save
           </button>
           <button
-            onClick={this.props.onClear}
+            onClick={() => {this.props.onClear(this.props.size)}}
           >
             Clear
           </button>

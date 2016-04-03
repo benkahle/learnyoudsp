@@ -7,7 +7,9 @@ const KernelList = ({items, onClick, onDelete}) => (
       <KernelListItem
         key={item.id}
         {...item}
-        onClick={onClick}
+        onClick={(id) => {
+          onClick(items.find(item => item.id === id).data)
+        }}
         onDelete={onDelete}
       />
     )}
