@@ -18,6 +18,14 @@ let sizeOptions = [
   {
     value: "5",
     display: "5x5"
+  },
+  {
+    value: "6",
+    display: "6x6"
+  },
+  {
+    value: "7",
+    display: "7x7"
   }
 ];
 
@@ -26,7 +34,7 @@ function emptyKernelBySize(size) {
   for (let i=0; i<size; i++) {
     kernel.push([])
     for (let j=0; j<size; j++) {
-      kernel.push("");
+      kernel[i].push(0);
     }
   }
   return kernel
@@ -65,7 +73,6 @@ let Kernel = ({
 )
 
 const mapStateToProps = (state) => {
-  console.log("props updated");
   return {
     storedKernels: state.kernel.stored,
     activeKernel: state.kernel.activeKernel,
@@ -79,7 +86,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onSelectKernelSize: (size) => {
       dispatch(setKernelSize(size))
     },
-    onClickKernelItem: (data) => {
+    onClickKernelItem: (data, size) => {
+      dispatch(setKernelSize(size))
       dispatch(setActiveKernel(data))
     },
     onDeleteKernelItem: (id) => {

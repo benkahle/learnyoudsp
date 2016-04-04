@@ -8,7 +8,8 @@ const KernelList = ({items, onClick, onDelete}) => (
         key={item.id}
         {...item}
         onClick={(id) => {
-          onClick(items.find(item => item.id === id).data)
+          let kern = items.find(item => item.id === id);
+          onClick(kern.data, kern.size)
         }}
         onDelete={onDelete}
       />

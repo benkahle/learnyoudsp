@@ -17,7 +17,7 @@ export const setKernelSize = (size) => {
 export const addStoredKernel = (kernel) => {
   return {
     type: "ADD_STORED_KERNEL",
-    id: nextStoredKernelId++, //TODO: Actual id
+    id: ""+nextStoredKernelId++, //TODO: Actual id
     name: kernel.name || "My_kernel_"+ (nextStoredKernelId - 100), //TODO: Better placeholder
     size: kernel.size,
     data: kernel.data

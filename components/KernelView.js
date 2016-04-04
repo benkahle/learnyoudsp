@@ -22,13 +22,13 @@ export default class KernelView extends Component {
     return (
       <div>
         <div className="kernel-view-left">
-          {rows.map((row, i) =>
+          {[...Array(this.props.size)].map((x, i) =>
             <div className="kernel-view-row" key={i} id={i}>
-              { row.map((col, j) =>
+              { [...Array(this.props.size)].map((x, j) =>
                 <input
                   onChange={(e) => this.onChange(i, j, e.target.value)}
                   className="kernel-view-cell" key={j} id={i+","+j}
-                  value={col}
+                  value={i < rows.length ? (j < rows[i].length ? rows[i][j] : 0) : 0}
                 >
                 </input>
               )}
@@ -37,7 +37,7 @@ export default class KernelView extends Component {
         </div>
         <div className="kernel-view-right">
           <button
-            onClick={this.props.onSave}
+            onClick={this.onSave}
           >
             Save
           </button>
