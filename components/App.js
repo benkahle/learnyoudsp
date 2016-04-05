@@ -5,10 +5,17 @@ import SideBar from './SideBar'
 
 const App = () => (
   <div className="container">
-    <TopSection />
+    <div className="row">
+      <div className="col-sm-10">
+        <TopSection />
+        <div className="separator"></div>
+        <MainSection />
+      </div>
+      <div className="col-sm-2">
+        <SideBar />
+      </div>
+    </div>
   </div>
 )
-// <MainSection />
-// <SideBar />
 
 export default App

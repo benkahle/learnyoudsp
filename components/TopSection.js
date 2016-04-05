@@ -5,8 +5,8 @@ import Instructions from "./Instructions"
 const TopSection = () => (
   <div className="row">
     <Kernel />
+    <Instructions />
   </div>
 )
-// <Instructions />
 
 export default TopSection
