@@ -2,18 +2,20 @@ import React, { PropTypes } from 'react'
 import KernelListItem from "./KernelListItem"
 
 const KernelList = ({items, onClick, onDelete}) => (
-  <div>
-    {items.map(item =>
-      <KernelListItem
-        key={item.id}
-        {...item}
-        onClick={(id) => {
-          let kern = items.find(item => item.id === id);
-          onClick(kern.data, kern.size)
-        }}
-        onDelete={onDelete}
-      />
-    )}
+  <div className="row">
+    <div className="list-group col-sm-12">
+      {items.map(item =>
+        <KernelListItem
+          key={item.id}
+          {...item}
+          onClick={(id) => {
+            let kern = items.find(item => item.id === id);
+            onClick(kern.data, kern.size)
+          }}
+          onDelete={onDelete}
+        />
+      )}
+    </div>
   </div>
 )
 

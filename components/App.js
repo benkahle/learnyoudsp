@@ -4,7 +4,7 @@ import MainSection from './MainSection'
 import SideBar from './SideBar'
 
 const App = () => (
-  <div>
+  <div className="container">
     <TopSection />
   </div>
 )

@@ -52,23 +52,32 @@ let Kernel = ({
   onSaveKernelData,
   onClearKernelData,
 }) => (
-  <div>
-    <KernelSize
-      options={sizeOptions}
-      onSelect={onSelectKernelSize}
-    />
-    <KernelList
-      items={storedKernels}
-      onClick={onClickKernelItem}
-      onDelete={onDeleteKernelItem}
-    />
-    <KernelView
-      size={size}
-      data={activeKernel}
-      onChange={onChangeKernelData}
-      onSave={onSaveKernelData}
-      onClear={onClearKernelData}
-    />
+  <div className="col-sm-6">
+    <h1>
+      Kernel
+    </h1>
+    <div className="row">
+      <div className="col-sm-6">
+        <KernelSize
+          options={sizeOptions}
+          onSelect={onSelectKernelSize}
+        />
+        <KernelList
+          items={storedKernels}
+          onClick={onClickKernelItem}
+          onDelete={onDeleteKernelItem}
+        />
+      </div>
+      <div className="col-sm-6">
+        <KernelView
+          size={size}
+          data={activeKernel}
+          onChange={onChangeKernelData}
+          onSave={onSaveKernelData}
+          onClear={onClearKernelData}
+        />
+      </div>
+    </div>
   </div>
 )
 

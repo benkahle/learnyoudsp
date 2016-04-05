@@ -16,9 +16,10 @@ export default class KernelSize extends Component {
 
   render() {
     return (
-      <div>
-        <span>Size:</span>
+      <div className="row">
+        <span className="col-sm-4">Size:</span>
         <select
+          className="col-sm-8"
           ref="select"
           onChange={this.onChange}
         >

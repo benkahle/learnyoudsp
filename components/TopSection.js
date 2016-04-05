@@ -3,7 +3,7 @@ import Kernel from "./Kernel"
 import Instructions from "./Instructions"
 
 const TopSection = () => (
-  <div>
+  <div className="row">
     <Kernel />
   </div>
 )
