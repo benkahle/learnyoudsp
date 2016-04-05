@@ -51,11 +51,15 @@ export default class KernelView extends Component {
         </div>
         <div className="col-sm-2">
           <button
+            type="button"
+            className="btn btn-success btn-sm"
             onClick={this.onSave}
           >
             Save
           </button>
           <button
+            type="button"
+            className="btn btn-danger btn-sm"
             onClick={() => {this.props.onClear(this.props.size)}}
           >
             Clear

@@ -3,7 +3,7 @@ import KernelListItem from "./KernelListItem"
 
 const KernelList = ({items, onClick, onDelete}) => (
   <div className="row">
-    <div className="list-group col-sm-12">
+    <div className="col-sm-12 btn-group-vertical kernel-list-container">
       {items.map(item =>
         <KernelListItem
           key={item.id}

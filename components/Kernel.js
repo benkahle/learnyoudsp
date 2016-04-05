@@ -52,12 +52,12 @@ let Kernel = ({
   onSaveKernelData,
   onClearKernelData,
 }) => (
-  <div className="col-sm-6">
+  <div className="col-sm-8">
     <h1>
       Kernel
     </h1>
     <div className="row">
-      <div className="col-sm-6">
+      <div className="col-sm-4">
         <KernelSize
           options={sizeOptions}
           onSelect={onSelectKernelSize}
@@ -68,7 +68,7 @@ let Kernel = ({
           onDelete={onDeleteKernelItem}
         />
       </div>
-      <div className="col-sm-6">
+      <div className="col-sm-8">
         <KernelView
           size={size}
           data={activeKernel}

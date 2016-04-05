@@ -7,16 +7,16 @@ export default class KernelListItem extends Component {
 
   render() {
     return (
-      <button type="button" className="row list-group-item">
-        <span className="col-sm-10"
-          onClick={() => {this.props.onClick(this.props.id)}}
-        >
+      <button type="button" className="row btn btn-secondary"
+        onClick={() => {this.props.onClick(this.props.id)}}
+      >
+        <span className="col-sm-10">
           {this.props.name}
         </span>
         {this.props.isRemovable &&
-          <span className="col-sm-1 pull-xs-right"
+          <i className="col-sm-1 pull-xs-right fa fa-remove"
             onClick={() => {this.props.onDelete(this.props.id)}}
-          >X</span>}
+          ></i>}
       </button>
     )
   }
