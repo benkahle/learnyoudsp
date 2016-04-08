@@ -1,10 +1,23 @@
+.container {
+  background-color: $grey50;
+}
+
 .kernel-view-row {
   width: 100%
 }
 
+.kernel-input {
+  height: 100%;
+  text-align: center;
+}
+
+.kernel-view {
+  height: 180px;
+}
+
 .kernel-list-container {
-  height: 185px;
   overflow-y: scroll;
+  height: 155px;
 }
 
 .separator {
@@ -12,11 +25,51 @@
 }
 
 .side-bar {
-  background: #EAEAEA;
-  height: 764px;
 }
 
 .main-section {
-  background: #EEEEEE;
-  height: 500px;
+}
+
+#input-canvas {
+  outline: 1px solid;
+  width: 100%;
+  height: 400px;
+}
+
+#output-canvas {
+  outline: 1px solid;
+  width: 100%;
+  height: 400px;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+
+  * {
+    flex: 0 1 auto;
+  }
+}
+
+.flex-row {
+  display: flex;
+  * {
+    flex: 0 1 auto;
+  }
+}
+
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  * {
+    flex: 0 1 auto;
+  }
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.right {
+  float: right;
 }

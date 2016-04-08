@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 
-const Instructions = () => (
+const SideBar = () => (
   <div className="col-sm-12 side-bar">
   </div>
 )
 
-export default Instructions
+export default SideBar
