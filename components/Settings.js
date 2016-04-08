@@ -9,15 +9,22 @@ const Settings = () => (
         </div>
         <div className="setting">
           <span>Speed</span>
+           <input className="speed-bar right" type="range" id="speedInput" defaultValue="50"/>
         </div>
         <div className="setting">
-          <span>Greyscale</span>
+          <span>Greyscale</span> <input className="right"type="checkbox"/>
         </div>
         <div className="setting">
-          <span>Show Kernel</span>
+          <span>Show Kernel</span> <input className="right" type="checkbox"/>
         </div>
         <div className="setting">
           <span>Image Size</span>
+          <select className="right">
+            <option defaultValue="360p">360p</option>
+            <option defaultValue="480p">480p</option>
+            <option defaultValue="720p">720p</option>
+            <option defaultValue="1080p">1080p</option>
+          </select>
         </div>
       </div>
       <div className="col-sm-2 flex-col-reverse">
