@@ -2,6 +2,10 @@
   background-color: $grey50;
 }
 
+.top-row {
+  padding: 24px;
+}
+
 .kernel-view-row {
   width: 100%
 }
@@ -20,14 +24,11 @@
   height: 155px;
 }
 
-.separator {
-  border: 1px dashed;
-}
-
 .side-bar {
 }
 
 .main-section {
+  padding: 24px;
 }
 
 #input-canvas {

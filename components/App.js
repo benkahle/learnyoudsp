@@ -8,10 +8,9 @@ const App = () => (
     <div className="row">
       <div className="col-sm-10">
         <TopSection />
-        <div className="separator"></div>
         <MainSection />
       </div>
-      <div className="col-sm-2">
+      <div className="col-sm-2 z-depth-1">
         <SideBar />
       </div>
     </div>

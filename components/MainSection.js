@@ -4,13 +4,15 @@ import Output from './Output'
 import Settings from './Settings'
 
 const MainSection = () => (
-  <div className="col-sm-12 main-section">
-    <div className="row">
-      <Input />
-      <Output />
-    </div>
-    <div className="row">
-      <Settings />
+  <div className="row main-section z-depth-1">
+    <div className="col-sm-12">
+      <div className="row">
+        <Input />
+        <Output />
+      </div>
+      <div className="row">
+        <Settings />
+      </div>
     </div>
   </div>
 )
