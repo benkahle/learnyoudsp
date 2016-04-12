@@ -27,6 +27,6 @@ export const addStoredKernel = (kernel) => {
 export const removeStoredKernel = (id) => {
   return {
     type: "REMOVE_STORED_KERNEL",
-    id: kernel.id
+    id: id
   }
 }
