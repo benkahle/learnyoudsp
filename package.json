@@ -9,7 +9,7 @@
     "watch": "webpack --watch --colors & npm run style",
     "bootstrap": "./node_modules/node-sass/bin/node-sass node_modules/bootstrap/scss/bootstrap.scss ./static/bootstrap.css",
     "bootstrap-mat": "./node_modules/node-sass/bin/node-sass node_modules/bootstrap-material-design/scss/bootstrap-material-design.scss ./static/bootstrap.css",
-    "localstyle": "./node_modules/node-sass/bin/node-sass ./styles/style.scss ./static/style.css",
+    "localstyle": "./node_modules/node-sass/bin/node-sass -wr ./styles/style.scss ./static/style.css",
     "style": "npm run bootstrap && npm run localstyle",
     "web": "http-server -p 3000",
     "start": "npm run watch & npm run web"

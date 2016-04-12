@@ -22,6 +22,7 @@ export default class KernelSize extends Component {
           className="col-sm-8"
           ref="select"
           onChange={this.onChange}
+          value={this.props.size}
         >
         {this.props.options.map(option =>
           <option key={option.value} value={option.value}>{option.display}</option>

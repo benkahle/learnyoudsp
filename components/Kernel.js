@@ -59,6 +59,7 @@ let Kernel = ({
     <div className="row">
       <div className="col-sm-4">
         <KernelSize
+          size={size}
           options={sizeOptions}
           onSelect={onSelectKernelSize}
         />
