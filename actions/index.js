@@ -30,3 +30,23 @@ export const removeStoredKernel = (id) => {
     id: id
   }
 }
+
+export const setInputUrl = (url) => {
+  return {
+    type: "SET_INPUT_URL",
+    url: url
+  }
+}
+export const setOutputUrl = (url) => {
+  return {
+    type: "SET_OUTPUT_URL",
+    url: url
+  }
+}
+
+export const setRunningStatus = (status) => {
+  return {
+    type: "SET_RUNNING_STATUS",
+    status: status
+  }
+}

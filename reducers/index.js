@@ -2,10 +2,31 @@ import { combineReducers } from 'redux'
 import kernel from './kernel'
 
 
-const input = (state = "", action) => {
+const inputUrl = (state = "", action) => {
   switch (action.type) {
-    case 'CHANGE_INPUT_URL':
+    case 'SET_INPUT_URL':
       return action.url
+      break;
+    default:
+      return state
+  }
+}
+
+const outputUrl = (state = "", action) => {
+  switch (action.type) {
+    case 'SET_OUTPUT_URL':
+      return action.url
+      break;
+    default:
+      return state
+  }
+}
+
+const runningStatus = (state = "stopped", action) => {
+  switch (action.type) {
+    case "SET_RUNNING_STATUS":
+      return action.status
+      break;
     default:
       return state
   }
@@ -13,7 +34,9 @@ const input = (state = "", action) => {
 
 const dspApp = combineReducers({
   kernel,
-  input
+  inputUrl,
+  outputUrl,
+  runningStatus
 })
 
 export default dspApp

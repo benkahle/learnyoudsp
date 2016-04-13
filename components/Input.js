@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
-import InputView from './InputView'
-import InputOptions from './InputOptions'
+import InputViewContainer from '../containers/InputViewContainer'
+import InputOptionsContainer from '../containers/InputOptionsContainer'
 
 const Input = () => (
   <div className="col-sm-6">
     <div className="row">
-      <InputView />
+      <InputViewContainer />
     </div>
     <div className="row">
-      <InputOptions />
+      <InputOptionsContainer/>
     </div>
   </div>
 )
