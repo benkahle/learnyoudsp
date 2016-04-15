@@ -1,11 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { compose, createStore } from 'redux'
+import persistState from 'redux-localstorage'
 import dspApp from './reducers'
 import App from './components/App'
 
-let store = createStore(dspApp, window.devToolsExtension ? window.devToolsExtension() : undefined)
+
+const createPersistentStore = compose(
+  persistState()
+)(createStore)
+
+let store = createPersistentStore(dspApp, window.devToolsExtension ? window.devToolsExtension() : undefined)
 
 render(
   <Provider store={store}>

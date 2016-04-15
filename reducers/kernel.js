@@ -6,17 +6,33 @@ const defaultState = {
   stored: [
     {
       id: "1",
-      name: "sobel",
+      name: "sobel-X",
       size: 3,
-      data: [[1,0,1],[1,2,1],[1,0,1]],
+      data: [[-1,0,1],[-2,0,2],[-1,0,1]],
       help: true,
       isRemovable: false
     },
     {
       id: "2",
-      name: "edge",
+      name: "sobel-Y",
       size: 3,
-      data: [[1,0,-1],[1,0,-1],[1,0,-1]],
+      data: [[-1,-2,-1],[0,0,0],[1,2,1]],
+      help: true,
+      isRemovable: false
+    },
+    {
+      id: "3",
+      name: "sharpen",
+      size: 3,
+      data: [[0,-1,0],[-1,5,-1],[0,-1,0]],
+      help: true,
+      isRemovable: false
+    },
+    {
+      id: "4",
+      name: "blur",
+      size: 3,
+      data: [[0,1,0],[1,-3,1],[0,1,0]],
       help: true,
       isRemovable: false
     }

@@ -7,6 +7,8 @@ export default class InputView extends Component {
 
   componentDidMount() {
     var canvas = this.refs.canvas;
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
     var context = canvas.getContext('2d');
     this.paint(context);
   }
@@ -33,6 +35,8 @@ export default class InputView extends Component {
     var canvas = this.refs.canvas;
     var width = image.width;
     var height = image.height;
+    console.log("im:", width, height);
+    console.log("can:", canvas.width, canvas.height);
     var minCanvasDim = Math.min(canvas.width, canvas.height);
     var maxCanvasDim = Math.max(canvas.width, canvas.height);
     var canvasRatio = canvas.width / canvas.height;
@@ -50,6 +54,7 @@ export default class InputView extends Component {
         height = maxImageDim;
       }
     }
+    console.log("scale:", width, height);
     return {width, height};
   }
 
