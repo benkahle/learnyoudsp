@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     inputUrl: state.inputUrl,
     kernel: state.kernel.activeKernel,
     kernelSize: Number(state.kernel.size),
-    outputUrl: state.outputUrl
+    outputUrl: state.outputUrl,
+    filter: state.filter
   }
 }
 

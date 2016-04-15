@@ -13,7 +13,6 @@ export default class Output extends Component {
   }
 
   componentDidUpdate() {
-    console.log("updating");
     if (this.props.runningStatus === "starting") {
       if (this.props.inputUrl) {
         console.log("Output starting computation");
@@ -38,9 +37,23 @@ export default class Output extends Component {
     this.paint(context);
   }
 
+  getOptionsForFilter(filter) {
+    var options;
+    switch (filter) {
+      case "convolve":
+        options = {kernel: this.props.kernel};
+        break;
+      default:
+        break;
+    }
+    return options;
+  }
+
   compute() {
     console.log("Output is computing...");
-    this.filterImage(filters.brightness, this.props.inputUrl, undefined, (newPixels) => {
+    var filter = filters[this.props.filter];
+    var options = this.getOptionsForFilter(this.props.filter);
+    this.filterImage(filter, this.props.inputUrl, options, (newPixels) => {
       var newUrl = this.getDataUrl(newPixels);
       this.props.setOutputUrl(newUrl);
       this.lastOutputUrl = newUrl;

@@ -32,10 +32,21 @@ const runningStatus = (state = "stopped", action) => {
   }
 }
 
+const filter = (state = "convolve", action) => {
+  switch (action.type) {
+    case "SET_FILTER":
+      return action.filter
+      break;
+    default:
+      return state
+  }
+}
+
 const dspApp = combineReducers({
   kernel,
   inputUrl,
   outputUrl,
+  filter,
   runningStatus
 })
 
