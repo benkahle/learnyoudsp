@@ -25,10 +25,11 @@
 }
 
 .side-bar {
+  padding: 24px 0 0;
 }
 
-.main-section {
-  padding: 24px;
+.main-panel {
+  padding: 24px !important;
 }
 
 #input-canvas {
@@ -54,6 +55,14 @@
 
 .flex-row {
   display: flex;
+  * {
+    flex: 0 1 auto;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
   * {
     flex: 0 1 auto;
   }
@@ -97,4 +106,32 @@
     background: white;
     cursor: inherit;
     display: block;
+}
+
+.history-item {
+  flex-shrink: 0;
+  align-items: center;
+  padding: 6px;
+  margin: 3px 6px;
+  img {
+    width: 100%;
+  }
+}
+
+.history-title {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24),
+}
+
+.history-delete {
+  align-self: flex-end;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.history-list {
+  overflow-y: scroll;
+  max-height: 500px;
 }

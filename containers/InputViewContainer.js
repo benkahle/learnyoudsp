@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-// import { setInputUrl } from '../actions'
 import InputView from '../components/InputView'
 
 const mapStateToProps = (state, ownProps) => {

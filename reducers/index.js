@@ -42,11 +42,25 @@ const filter = (state = "convolve", action) => {
   }
 }
 
+const historyList = (state = [], action) => {
+  switch (action.type) {
+    case "ADD_TO_HISTORY":
+      return [...state, action.url];
+      break;
+    case "REMOVE_FROM_HISTORY":
+      return state.filter((url, i) => i !== action.index)
+      break;
+    default:
+      return state
+  }
+}
+
 const dspApp = combineReducers({
   kernel,
   inputUrl,
   outputUrl,
   filter,
+  historyList,
   runningStatus
 })
 

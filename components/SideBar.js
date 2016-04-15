@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
+import HistoryListContainer from "../containers/HistoryListContainer"
 
 const SideBar = () => (
-  <div className="col-sm-12 side-bar">
-  </div>
+  <HistoryListContainer />
 )
 
 export default SideBar

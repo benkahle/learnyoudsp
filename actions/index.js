@@ -57,3 +57,17 @@ export const setFilter = (filter) => {
     filter: filter
   }
 }
+
+export const addToHistory = (url) => {
+  return {
+    type: "ADD_TO_HISTORY",
+    url: url
+  }
+}
+
+export const removeFromHistory = (index) => {
+  return {
+    type: "REMOVE_FROM_HISTORY",
+    index: index
+  }
+}

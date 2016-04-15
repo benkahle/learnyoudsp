@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
-import { setRunningStatus } from '../actions'
-import { setOutputUrl } from '../actions'
+import { setInputUrl, setRunningStatus, setOutputUrl, addToHistory } from '../actions'
 import Output from '../components/Output'
 
 const mapStateToProps = (state, ownProps) => {
@@ -24,6 +23,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     setOutputUrl: (url) => {
       dispatch(setOutputUrl(url));
+    },
+    addToHistory: (url) => {
+      dispatch(addToHistory(url));
+    },
+    setInputUrl: (url) => {
+      dispatch(setInputUrl(url));
     }
   }
 }
