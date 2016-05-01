@@ -12,7 +12,7 @@ const MainSection = () => (
         <Input />
         <OutputContainer />
       </div>
-      <div className="row">
+      <div className="row" style={{marginTop: "10px"}}>
         <SettingsContainer />
       </div>
     </div>

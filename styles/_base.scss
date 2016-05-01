@@ -26,6 +26,14 @@
 
 .side-bar {
   padding: 24px 0 0;
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-section {
+  position: relative;
 }
 
 .main-panel {

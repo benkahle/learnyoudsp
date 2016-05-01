@@ -5,6 +5,7 @@ export default class Output extends Component {
   constructor(props) {
     super(props)
     this.setInputUrl = this.setInputUrl.bind(this)
+    this.saveToHistory = this.saveToHistory.bind(this)
   }
 
   componentDidMount() {
@@ -59,9 +60,6 @@ export default class Output extends Component {
     this.filterImage(filter, this.props.inputUrl, options, (newPixels) => {
       var newUrl = this.getDataUrl(newPixels);
       this.props.setOutputUrl(newUrl);
-      if (this.lastOutputUrl !== newUrl) {
-        this.props.addToHistory(newUrl);
-      }
       this.lastOutputUrl = newUrl;
       console.log("Output is Finished");
       this.props.onComplete();
@@ -146,6 +144,10 @@ export default class Output extends Component {
     }
   }
 
+  saveToHistory() {
+    this.props.addToHistory(this.props.outputUrl);
+  }
+
   render() {
     return (
       <div className="col-sm-6">
@@ -156,7 +158,10 @@ export default class Output extends Component {
         </div>
         <div className="row">
           <div className="col-sm-12 flex-row-reverse">
-            <button type="button" onClick={this.setInputUrl} className="btn btn-secondary">Set as input</button>
+            <div className="btn-group" role="group">
+              <button type="button" onClick={this.setInputUrl} className="btn btn-secondary">Set as input</button>
+              <button type="button" onClick={this.saveToHistory} className="btn btn-secondary">Save</button>
+            </div>
           </div>
         </div>
       </div>

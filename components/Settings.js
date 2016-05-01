@@ -9,11 +9,11 @@ const filters = [
 ];
 
 const Settings = (props) => (
-  <div className="col-sm-12">
-    <div className="row flex-row space-between">
-      <div className="col-sm-4">
+  <div>
+    <div className="flex-row space-between">
+      <div className="col-sm-6">
         <div className="setting">
-          <h3>Settings:<i className="right fa fa-question-circle"></i></h3>
+          <h3>Settings:<i className="right fa fa-question-circle" style={{lineHeight: 1.1}}></i></h3>
         </div>
         <div className="setting">
           <span>Filter:</span>
@@ -28,7 +28,7 @@ const Settings = (props) => (
           </select>
         </div>
       </div>
-      <div className="col-sm-1 flex-col-reverse">
+      <div className="col-sm-2 flex-col-reverse">
         <button type="button" onClick={props.onRun} className="btn btn-primary">
         {props.runningStatus === "running" ? <i className='fa fa-spinner fa-spin'></i> : "Run"}
         </button>
