@@ -58,6 +58,27 @@ export const setFilter = (filter) => {
   }
 }
 
+export const setBrightnessSettings = (value) => {
+  return {
+    type: "SET_BRIGHTNESS_SETTINGS",
+    value: value
+  }
+}
+
+export const setThresholdSettings = (value) => {
+  return {
+    type: "SET_THRESHOLD_SETTINGS",
+    value: value
+  }
+}
+
+export const setConvolutionSettings = (settings) => {
+  return {
+    type: "SET_CONVOLUTION_SETTINGS",
+    settings: settings
+  }
+}
+
 export const addToHistory = (url) => {
   return {
     type: "ADD_TO_HISTORY",

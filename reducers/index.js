@@ -42,6 +42,36 @@ const filter = (state = "convolve", action) => {
   }
 }
 
+const brightnessSettings = (state = 50, action) => {
+  switch (action.type) {
+    case "SET_BRIGHTNESS_SETTINGS":
+      return action.value
+      break;
+    default:
+      return state
+  }
+}
+
+const thresholdSettings = (state = 50, action) => {
+  switch (action.type) {
+    case "SET_THRESHOLD_SETTINGS":
+      return action.value
+      break;
+    default:
+      return state
+  }
+}
+
+const convolutionSettings = (state = {}, action) => {
+  switch (action.type) {
+    case "SET_CONVOLUTION_SETTINGS":
+      return action.settings
+      break;
+    default:
+      return state
+  }
+}
+
 const historyList = (state = [], action) => {
   switch (action.type) {
     case "ADD_TO_HISTORY":
@@ -60,6 +90,9 @@ const dspApp = combineReducers({
   inputUrl,
   outputUrl,
   filter,
+  brightnessSettings,
+  thresholdSettings,
+  convolutionSettings,
   historyList,
   runningStatus
 })

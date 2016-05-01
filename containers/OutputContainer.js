@@ -9,7 +9,10 @@ const mapStateToProps = (state, ownProps) => {
     kernel: state.kernel.activeKernel,
     kernelSize: Number(state.kernel.size),
     outputUrl: state.outputUrl,
-    filter: state.filter
+    filter: state.filter,
+    brightnessSettings: state.brightnessSettings,
+    thresholdSettings: state.thresholdSettings,
+    convolutionSettings: state.convolutionSettings
   }
 }
 

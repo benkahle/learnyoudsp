@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import * as filters from '../filters'
 
-export default class Output extends Component {
+class Output extends Component {
   constructor(props) {
     super(props)
     this.setInputUrl = this.setInputUrl.bind(this)
@@ -46,6 +46,17 @@ export default class Output extends Component {
     switch (filter) {
       case "convolve":
         options = {kernel: this.props.kernel};
+        break;
+      case "brightness":
+        // let rawValue = this.props.brightnessSettings;
+        // options = {adj: rawValue - 50}
+        console.log(this.props.brightnessSettings);
+        options = {adj: Number(this.props.brightnessSettings)}
+        break;
+      case "threshold":
+        // let rawCutOff = this.props.thresholdSettings;
+        // options = {threshold: 255/100*rawCutOff}
+        options = {threshold: this.props.thresholdSettings}
         break;
       default:
         break;

@@ -4,6 +4,7 @@
 export const brightness = (pixels, options = {}) => {
   var d = pixels.data;
   options.adj = options.adj || 50;
+  console.log(options.adj);
   for (var i=0; i<d.length; i+=4) {
     d[i] += options.adj;
     d[i+1] += options.adj;
