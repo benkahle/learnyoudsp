@@ -29,6 +29,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     addToHistory: (url) => {
       dispatch(addToHistory(url));
+      let $list = $(".history-list");
+      $list.animate({
+        scrollTop: $list.prop("scrollHeight")
+      }, 300);
     },
     setInputUrl: (url) => {
       dispatch(setInputUrl(url));
