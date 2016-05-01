@@ -1,6 +1,7 @@
 import React from 'react'
 import TopSection from './TopSection'
 import MainSection from './MainSection'
+import Modals from './Modals'
 
 const App = () => (
   <div className="container">
@@ -10,6 +11,7 @@ const App = () => (
         <MainSection />
       </div>
     </div>
+    <Modals />
   </div>
 )
 

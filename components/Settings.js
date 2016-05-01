@@ -13,7 +13,13 @@ const Settings = (props) => (
     <div className="flex-row space-between">
       <div className="col-sm-6">
         <div className="setting">
-          <h3>Settings:<i className="right fa fa-question-circle" style={{lineHeight: 1.1}}></i></h3>
+          <h3>Settings:
+            <i type="button" className="right fa fa-question-circle clickable"
+              style={{lineHeight: 1.1}}
+              data-toggle="modal"
+              data-target="#settingsModal">
+            </i>
+          </h3>
         </div>
         <div className="setting">
           <span>Filter:</span>
