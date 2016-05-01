@@ -14,8 +14,8 @@ const Settings = (props) => (
       <div className="col-sm-6">
         <div className="setting">
           <h3>Settings:
-            <i type="button" className="right fa fa-question-circle clickable"
-              style={{lineHeight: 1.1}}
+            <i type="button" className="fa fa-question-circle clickable"
+              style={{lineHeight: 1.1, marginLeft: "15px"}}
               data-toggle="modal"
               data-target="#settingsModal">
             </i>

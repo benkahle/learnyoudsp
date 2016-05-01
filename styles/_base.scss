@@ -19,6 +19,12 @@
   height: 180px;
 }
 
+.kernel-view-buttons {
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+}
+
 .kernel-list-container {
   overflow-y: scroll;
   height: 155px;

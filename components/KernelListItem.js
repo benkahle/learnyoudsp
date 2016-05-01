@@ -6,6 +6,14 @@ export default class KernelListItem extends Component {
   }
 
   render() {
+    let actionButton = this.props.isRemovable ?
+    <i className="pull-xs-right fa fa-remove clickable"
+      onClick={() => {this.props.onDelete(this.props.id)}}
+    ></i> :
+    <i className="pull-xs-right fa fa-question-circle clickable"
+      data-toggle="modal"
+      data-target={"#kernel"+this.props.name+"Modal"}
+    ></i>
     return (
       <button type="button" className="btn btn-secondary"
         onClick={() => {this.props.onClick(this.props.id)}}
@@ -13,10 +21,7 @@ export default class KernelListItem extends Component {
         <span className="">
           {this.props.name}
         </span>
-        {this.props.isRemovable &&
-          <i className="pull-xs-right fa fa-remove"
-            onClick={() => {this.props.onDelete(this.props.id)}}
-          ></i>}
+        {actionButton}
       </button>
     )
   }

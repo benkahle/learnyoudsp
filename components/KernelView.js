@@ -53,7 +53,7 @@ export default class KernelView extends Component {
             </div>
           )}
         </div>
-        <div className="col-sm-2 flex-col-reverse">
+        <div className="col-sm-2 flex-col-reverse kernel-view-buttons">
           <button
             type="button"
             className="btn btn-success btn-sm"

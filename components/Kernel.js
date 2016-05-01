@@ -55,6 +55,11 @@ let Kernel = ({
   <div className="col-sm-8">
     <h1>
       Kernel
+      <i type="button" className="fa fa-question-circle clickable"
+        style={{marginLeft: "15px"}}
+        data-toggle="modal"
+        data-target="#kernelModal">
+      </i>
     </h1>
     <div className="row">
       <div className="col-sm-4">
