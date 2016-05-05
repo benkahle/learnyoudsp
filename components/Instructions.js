@@ -6,8 +6,8 @@ const Instructions = () => (
     <ol>
       <li>Select a kernel or design your own</li>
       <li>Choose a starting image, or upload one from your computer</li>
-      <li>Choose animation and processing settings</li>
-      <li>Click run to watch the convolution and generate the resulting image</li>
+      <li>Click run to calculate the convolution and generate the resulting image</li>
+      <li>Change the kernel or the filter mode and keep learning!</li>
     </ol>
   </div>
 )

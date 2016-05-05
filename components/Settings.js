@@ -66,7 +66,7 @@ class Settings extends Component {
         <div className="flex-row space-between">
           <div className="col-sm-6">
             <div className="setting">
-              <h3>Settings:
+              <h3>Filter Mode:
                 <i type="button" className="fa fa-question-circle clickable"
                   style={{lineHeight: 1.1, marginLeft: "15px"}}
                   data-toggle="modal"

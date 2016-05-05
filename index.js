@@ -8,10 +8,11 @@ import App from './components/App'
 
 
 const createPersistentStore = compose(
-  persistState()
+  persistState(),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore)
 
-let store = createPersistentStore(dspApp, window.devToolsExtension ? window.devToolsExtension() : undefined)
+let store = createPersistentStore(dspApp)
 
 render(
   <Provider store={store}>

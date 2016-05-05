@@ -24,6 +24,7 @@ export default class InputView extends Component {
 
   paint(context) {
     var image = new Image();
+    image.crossOrigin = "Anonymous";
     image.src = this.props.inputUrl || "";
     image.onload = () => {
       var size = this.getScaledDimensions(image);

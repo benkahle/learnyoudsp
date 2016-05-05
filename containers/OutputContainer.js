@@ -19,6 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onComplete: () => {
+      console.log("stopped");
       dispatch(setRunningStatus("stopped"));
     },
     onStarted: () => {
@@ -28,7 +29,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(setOutputUrl(url));
     },
     addToHistory: (url) => {
-      dispatch(addToHistory(url));
+      dispatch(addToHistory({url, isRemovable: true}));
       let $list = $(".history-list");
       $list.animate({
         scrollTop: $list.prop("scrollHeight")

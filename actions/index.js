@@ -79,10 +79,11 @@ export const setConvolutionSettings = (settings) => {
   }
 }
 
-export const addToHistory = (url) => {
+export const addToHistory = (entry) => {
   return {
     type: "ADD_TO_HISTORY",
-    url: url
+    url: entry.url,
+    isRemovable: entry.isRemovable || true
   }
 }
 

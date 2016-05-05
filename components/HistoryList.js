@@ -3,13 +3,14 @@ import HistoryListItem from "./HistoryListItem"
 
 const HistoryList = (props) => (
   <div className="col-sm-3 z-depth-1 side-bar">
-    <h3 className="history-title">History</h3>
+    <h3 className="history-title">Gallery</h3>
     <div className="col-sm-12 flex-col history-list">
-    {props.historyList.map((url, i) =>
+    {props.historyList.map((entry, i) =>
       <HistoryListItem
       key={i}
       index={i}
-      url={url}
+      url={entry.url}
+      isRemovable={entry.isRemovable}
       onDelete={props.onDelete}
       onSetInputUrl={props.onSetInputUrl}
       />

@@ -72,13 +72,28 @@ const convolutionSettings = (state = {}, action) => {
   }
 }
 
-const historyList = (state = [], action) => {
+const defaultHistory = [
+  {
+    url: "/static/images/butterfly.jpg",
+    isRemovable: false
+  },
+  {
+    url: "/static/images/shark.jpg",
+    isRemovable: false
+  },
+  {
+    url: "/static/images/tiger.jpg",
+    isRemovable: false
+  }
+];
+
+const historyList = (state = defaultHistory, action) => {
   switch (action.type) {
     case "ADD_TO_HISTORY":
-      return [...state, action.url];
+      return [...state, {url: action.url, isRemovable: action.isRemovable}];
       break;
     case "REMOVE_FROM_HISTORY":
-      return state.filter((url, i) => i !== action.index)
+      return state.filter((entry, i) => i !== action.index)
       break;
     default:
       return state

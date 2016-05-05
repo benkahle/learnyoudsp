@@ -9,7 +9,6 @@ export default class KernelView extends Component {
 
   onChange(i, j, val) {
     var data = []
-    console.log(this.props.data);
     for (let x=0; x<this.props.size; x++) {
       data.push([])
       for (let y=0; y<this.props.size; y++) {
