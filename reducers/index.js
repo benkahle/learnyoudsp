@@ -74,15 +74,15 @@ const convolutionSettings = (state = {}, action) => {
 
 const defaultHistory = [
   {
-    url: "/static/images/butterfly.jpg",
+    url: "static/images/butterfly.jpg",
     isRemovable: false
   },
   {
-    url: "/static/images/shark.jpg",
+    url: "static/images/shark.jpg",
     isRemovable: false
   },
   {
-    url: "/static/images/tiger.jpg",
+    url: "static/images/tiger.jpg",
     isRemovable: false
   }
 ];
