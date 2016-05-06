@@ -1,7 +1,7 @@
 {
   "name": "learnyoudsp",
   "version": "1.0.0",
-  "description": "",
+  "description": "An educational image filtering application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
