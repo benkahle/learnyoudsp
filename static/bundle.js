@@ -23032,7 +23032,7 @@
 
 	  var d = pixels.data;
 	  options.adj = options.adj || 50;
-	  console.log(options.adj);
+	  // For each pixel, directly add or subtract the adjustment value to each of the rgb values
 	  for (var i = 0; i < d.length; i += 4) {
 	    d[i] += options.adj;
 	    d[i + 1] += options.adj;
@@ -23061,9 +23061,12 @@
 	  var d = pixels.data;
 	  options.threshold = options.threshold || 128;
 	  for (var i = 0; i < d.length; i += 4) {
+	    // get the rgb values from each pixel
 	    var r = d[i];
 	    var g = d[i + 1];
 	    var b = d[i + 2];
+	    // Set the ouput value to 255 if the greyscale value of the pixel is greater than the cutoff
+	    // Otherwise set it to 0
 	    var v = 0.2126 * r + 0.7152 * g + 0.0722 * b >= options.threshold ? 255 : 0;
 	    d[i] = d[i + 1] = d[i + 2] = v;
 	  }
@@ -23098,8 +23101,10 @@
 	  var alphaFac = opaque ? 1 : 0;
 	  for (var y = 0; y < h; y++) {
 	    for (var x = 0; x < w; x++) {
+	      // store the current x and y pixels
 	      var sy = y;
 	      var sx = x;
+	      // Find the output coordinate location in an array like [r,g,b,a,r,g,b,a,r,g,b,a]
 	      var dstOff = (y * w + x) * 4;
 	      // calculate the weighed sum of the source image pixels that
 	      // fall under the convolution matrix
@@ -23109,11 +23114,17 @@
 	          a = 0;
 	      for (var cy = 0; cy < kernHeight; cy++) {
 	        for (var cx = 0; cx < kernWidth; cx++) {
+	          // store the source x and y pixels under the specific kernel pixel
 	          var scy = sy + cy - halfHeight;
 	          var scx = sx + cx - halfWidth;
+	          // if the source x/y pixels under the kernel pixel are actually
+	          // within the source dimensions...
 	          if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
+	            // find the pixel values of specified location on the source image
 	            var srcOff = (scy * sw + scx) * 4;
+	            // find the weight of the kernel at the specified location
 	            var wt = kernel[cy][cx];
+	            // add the scaled pixel values to the cumulative sum
 	            r += src[srcOff] * wt;
 	            g += src[srcOff + 1] * wt;
 	            b += src[srcOff + 2] * wt;
@@ -23121,6 +23132,7 @@
 	          }
 	        }
 	      }
+	      // Save the final sum as the output pixel value
 	      dst[dstOff] = r;
 	      dst[dstOff + 1] = g;
 	      dst[dstOff + 2] = b;
