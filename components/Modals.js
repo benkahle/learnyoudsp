@@ -64,22 +64,22 @@ const kernelBody = (
     Applied to two dimensional functions like images, convolution is useful for may tasks including edge finding, feature detection, motion detection, and image matching.
     Formally, for matrices f and g of a dimensions (m,n), convolution can be written as:
     </p>
-    <img src='/static/images/convEq.png' style={{width: "100%"}}/>
+    <img src='static/images/convEq.png' style={{width: "100%"}}/>
     <p>
     Visually, this operation can be seen as scanning the center of the kernel over the data matrix where the value of the output under the center of kernel is equal to the sum of the product of the values of the kernel multiplied by the values of the data matrix immediately below them.
     This can be seen in the following sequence of images:
     </p>
-    <img src='/static/images/conv1.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
-    <img src='/static/images/conv2.png' style={{width: 49+"%"}}/>|
-    <img src='/static/images/conv3.png' style={{width: 49+"%"}}/>
-    <img src='/static/images/conv4.png' style={{width: 49+"%"}}/>|
-    <img src='/static/images/conv5.png' style={{width: 49+"%"}}/>
-    <img src='/static/images/conv6.png' style={{width: 49+"%"}}/>|
-    <img src='/static/images/conv7.png' style={{width: 49+"%"}}/>
-    <img src='/static/images/conv8.png' style={{width: 49+"%"}}/>|
-    <img src='/static/images/conv9.png' style={{width: 49+"%"}}/>
-    <img src='/static/images/conv10.png' style={{width: 49+"%"}}/>
-    <img src='/static/images/conv11.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/conv1.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/conv2.png' style={{width: 49+"%"}}/>|
+    <img src='static/images/conv3.png' style={{width: 49+"%"}}/>
+    <img src='static/images/conv4.png' style={{width: 49+"%"}}/>|
+    <img src='static/images/conv5.png' style={{width: 49+"%"}}/>
+    <img src='static/images/conv6.png' style={{width: 49+"%"}}/>|
+    <img src='static/images/conv7.png' style={{width: 49+"%"}}/>
+    <img src='static/images/conv8.png' style={{width: 49+"%"}}/>|
+    <img src='static/images/conv9.png' style={{width: 49+"%"}}/>
+    <img src='static/images/conv10.png' style={{width: 49+"%"}}/>
+    <img src='static/images/conv11.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     By designing recognizing the outputs of convolution we can design kernels to perform specific tasks on images.
     This application aims to provide the opportunity to learn about convolution and kernels through example and experimentation.
@@ -98,7 +98,7 @@ const kernelBody = (
 
 const sobelXBody = (
   <div>
-    <img src='/static/images/sobelx.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/sobelx.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     Sobel kernels create an image emphasizing edges in a specific direction.
     It calculates the gradient of the image in the x direction, thereby highlighting vertical edges on the image.
@@ -112,7 +112,7 @@ const sobelXBody = (
 
 const sobelYBody = (
   <div>
-    <img src='/static/images/sobely.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/sobely.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     Sobel kernels create an image emphasizing edges in a specific direction.
     It calculates the gradient of the image in the y direction, thereby highlighting horizontal edges on the image.
@@ -126,7 +126,7 @@ const sobelYBody = (
 
 const edgeBody = (
   <div>
-    <img src='/static/images/edge.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/edge.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     A simple edge detection kernel, sometimes called an "outline" kernel.
     This kernel finds regions with large changes in pixel values by multiplying the central pixel by the sum of 8 times the value below the center plus -1 times the values surrounding the center.
@@ -138,7 +138,7 @@ const edgeBody = (
 
 const embossBody = (
   <div>
-    <img src='/static/images/emboss.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/emboss.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     The emboss kernel is very similar to the Sobel filters in that it highlights the differences of pixels in a given direction.
     In this implementation the kernel computes the gradient of the image in the direction from the top left to the bottom right.
@@ -149,7 +149,7 @@ const embossBody = (
 
 const sharpenBody = (
   <div>
-    <img src='/static/images/sharpen.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/sharpen.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     The sharpen kernel uses similar ideas as the edge (outline) kernel to emphasize differences in adjacent pixel values.
     In fact, if you lower the center value to 4 it acts as a very basic edge kernel in the X- and Y-directions (no input from the corners).
@@ -160,7 +160,7 @@ const sharpenBody = (
 
 const boxBlurBody = (
   <div>
-    <img src='/static/images/boxblur.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/boxblur.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     The Box Blur kernel is a very simple blurring kernel.
     The kernel takes the average of all of the surrounding pixels with no additional weighting.
@@ -171,7 +171,7 @@ const boxBlurBody = (
 
 const gaussianBlurBody = (
   <div>
-    <img src='/static/images/gaussianblur.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/gaussianblur.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     The Gaussian Blur kernel smoothes an image using a <a href="https://en.wikipedia.org/wiki/Gaussian_function">Gaussian Function</a>.
     The kernel takes the average of all of the surrounding pixels weighting pixels nearer to the center more than those on the outside.
@@ -182,7 +182,7 @@ const gaussianBlurBody = (
 
 const unsharpMaskBody = (
   <div>
-    <img src='/static/images/unsharpmask.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
+    <img src='static/images/unsharpmask.png' style={{width: 50+"%", marginLeft: 25+"%"}}/>
     <p>
     The Unsharp Mask kernel is a more sharpening kernel that combines concepts from the simple sharpen kernel and the Gaussian Blur.
     The large central value is surrounded by smaller negative values like the sharpen mask that emphasizes differences in intensity values between neighboring pixels.
